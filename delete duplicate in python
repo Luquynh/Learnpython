@@ -1,0 +1,24 @@
+#delete duplicate numbers in python
+#First solution: <Not in order>
+nums=[2,2,4,6,3,4,6,1]
+l=len(nums)
+a=[]
+nums.sort()
+for i in range(l):
+    t=0
+    j=i+1
+    while(j<l):
+        if nums[i] == nums[j]:
+            t=t+1
+        j=j+1
+    if t==0:
+        a.append(nums[i])
+            
+print(f"New list: {a}")   
+#Second solution:
+nums=[2,2,4,6,3,4,6,1]
+b=[]
+for i in nums:
+    if i not in b:
+        b.append(i)
+print(f"New list {b}")
